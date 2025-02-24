@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-step form</title>
+</head>
+<body>
+    <div class="main-container">
+            <!-- progressbar -->
+             <div class="progress-con">
+                <div class="progress-step" title="Info"></div>
+                <div class="progress-step" title="Plan"></div>
+                <div class="progress-step" title="Add-Ons"></div>
+                <div class="progress-step" title="Summary"></div>
+             </div>
+
+        <!-- form -->
+        <form action="#" class="form">
+            <!-- form 1 -->
+            <div class="form-step form-step-active" id="step1">
+                <div class="form-heading">
+                    <h2>Personal info</h2>
+                    <p>Please provide your name, email address and phone number.</p>
+                </div>
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g John Doe">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email address</label>
+                    <input type="text" id="email" name="email" placeholder="e.g johndoe@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" id="phone" name="phone" placeholder="e.g 08123456789">
+                </div>
+                <div class="btn-container">
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+            <!-- form 2 -->
+            <div class="form-step" id="step2">
+                <div class="form-heading">
+                    <h2>Select Your Plan</h2>
+                    <p>You have the option of monthly or yearly billing.
+                </div>
+                <!-- monthly selection -->
+                <div class="Plan-selection show">
+                    <!-- <h4>Monthly</h4> -->
+                   <div class="plan">
+                    <img src="/icons/icon-arcade.svg" alt="">
+                    <h3>Arcade</h3>
+                    <p>$9/month</p>
+                   </div>
+
+                   <div class="plan">
+                    <img src="/icons/icon-advanced.svg" alt="">
+                    <h3>Advanced</h3>
+                    <p>$12/month</p>
+                   </div>
+
+                   <div class="plan">
+                    <img src="/icons/icon-pro.svg" alt="">
+                    <h3>Pro</h3>
+                    <p>$15/month</p>
+                   </div>
+                </div>
+                <!-- yearly selection -->
+                <div class="Plan-selection hide">
+                    <div class="plan">
+                     <img src="/icons/icon-arcade.svg" alt="">
+                     <h3>Arcade</h3>
+                     <p>$90/yearr</p>
+                    </div>
+ 
+                    <div class="plan">
+                     <img src="/icons/icon-advanced.svg" alt="">
+                     <h3>Advanced</h3>
+                     <p>$120/year</p>
+                    </div>
+ 
+                    <div class="plan">
+                     <img src="/icons/icon-pro.svg" alt="">
+                     <h3>Pro</h3>
+                     <p>$150/year</p>
+                    </div>
+                 </div>
+
+                <div class="toggle-plan">
+                    <span>monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="togglePlan">
+                        <span class="slider"></span>
+                    </label>
+                    <span>yearly</span>
+                </div>
+                
+                <div class="btn-container">
+                    <button class="prev-btn">Previous</button>
+                    <button class="next-btn">Next</button> 
+                </div>
+            </div>
+            <!-- form section 3 -->
+            <div class="form-step" id="step3">
+                <div class="form-heading">
+                    <h2>Pick Add-ons</h2>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                </div>
+                <!-- 3 Addon options -->
+                 <div class="addOns-Cont">
+                    <div class="addOnOptions">
+                        <label><input type="checkbox" id="name" name="name" placeholder="e.g John Doe"></label>
+                        <div>
+                            <h3>Online Service</h3>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                    </div>
+    
+                    <div class="addOnOptions">
+                        <label><input type="checkbox" id="name" name="name" placeholder="e.g John Doe"></label>
+                        <div>
+                            <h3>Larger Storage</h3>
+                            <p>Extra 1TB of cloud save</p>
+                        </div>
+                    </div>
+    
+                    <div class="addOnOptions">
+                        <label><input type="checkbox" id="name" name="name" placeholder="e.g John Doe"></label>
+                        <div>
+                            <h3>Customizable Profile</h3>
+                            <p>Custom theme on your profile</p>
+                        </div>
+                    </div>
+                 </div>
+
+                <div class="btn-container">
+                    <button class="prev-btn">Previous</button>
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+            <!-- form 4 -->
+            <div class="form-step" id="step4">
+                <div class="form-heading">
+                    <h2>Finishing Up</h2>
+                    <p>Double-check everything looks <b>OK</b> before confirming</p>
+                </div>
+
+                <div class="finishingUp-box">
+                    <div class="finishingUp header">
+                        <div class="arcade">
+                            <strong>Arcade(Monthly)</strong> <br>
+                            <a class="formstepthree" href="#">Change</a>
+                        </div>
+                        <strong>$9/mo</strong>
+                    </div>
+                    <hr>
+                    <div class="finishingUp item">
+                        <p>Online Service</p>
+                        <p>+1/mo</p>
+                    </div>
+                    <div class="finishingUp item">
+                        <p>Larger Storage</p>
+                        <p>+2/mo</p>
+                    </div>
+                </div>
+
+
+                <div class="finishingUp total">
+                    <p>Total (Per month)</p>
+                    <p class="totalPrice">+12/mo+</p>
+                </div>
+
+                <div class="btn-container">
+                    <button class="prev-btn">Previous</button>
+                    <button class="next-btn">Confirm</button>
+                </div>
+            </div>
+
+            <!-- form section 5 -->
+             <div class="form-step" id="step5">
+                <div class="thankyou-Cont"></div>
+                <div class="thankYou">
+                    <img src="/icons/icon-thank-you.svg" alt="">
+                    <h2>Thank you!</h2>
+                    <p>Thanks for confirming your subscription! We hope you have <br>
+                       fun using our platform. If yiu ever need support, please feel <br>
+                       free to email us at <a href="#">favouritefindy@gmail.com</a></p>
+                </div>
+             </div>
+        </form>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

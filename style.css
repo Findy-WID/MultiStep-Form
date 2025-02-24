@@ -1,0 +1,304 @@
+:root {
+    --bg-color: #b6b3b3ad;
+    --bg-hover: #afaeaedc;
+    --btn-color: #007BFF;
+    --btn-hover: #0056b3; 
+    --text-color: #FFFFFF;
+    --text-ash: #acacb4;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.5 rem;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 45rem;
+    background-color: var(--bg-color);
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.progress-con {
+    width: 20%;
+    height: 100%;
+    background: url(/icons/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    counter-reset: step;
+}
+.progress-con:before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 43%;
+    background-color: var(--bg-color);
+
+}
+
+.progress-step::before {
+    content: counter(step);
+    font-weight: bold;
+}
+.progress-step::after {
+    content: attr(title);
+    position: absolute;
+    left: 6rem;
+    font-size: 0.85rem;
+}
+
+.progress-step {
+    width: 2.19rem;
+    height: 2.19rem;
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    padding: 1.5em;
+    margin: 2rem;
+    counter-increment: step;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+.form {
+    width: 70%;
+    height: 100%;
+    margin: 30px 50px ;
+    padding: 1.5rem;
+}
+.form-step{
+    padding: 1rem
+}
+.form h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+.form-heading p {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.form-step {
+    display: none;
+}
+.form-step-active {
+    display: block;
+}
+input {
+    padding: 1.5rem;
+    display: block;
+    width: 100%;
+    border: 1px solid #99af9e;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+label {
+    font-size: 2rem;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.btn-container button {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #99af9e;
+    background-color: var(--btn-color);
+    cursor: pointer;
+    transition: 0.3%;
+    flex: 1;
+    margin: 0.3rem;
+    color: var(--text-color);
+    font-size: 1.5rem; 
+}
+.btn-container button:hover {
+    background-color: var(--btn-hover);
+    box-shadow: 0 0 0 2px white, 0 0 0 3px var(--btn-color);
+}
+
+.input-group {
+    margin: 2rem 0;
+}
+/* styling the selection plan section */
+.Plan-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+.plan {
+    width: 14rem;
+    height: 15rem;
+    border: 1px solid var(--btn-hover);
+    border-radius: 8px;
+    margin: 2rem 0.75rem;
+    position: relative;
+}
+.plan:hover{
+    background-color: var(--bg-hover);
+}
+.plan h3, .plan p, .plan img {
+    position: absolute;
+}
+.plan h3 {
+    top: 8.5rem;
+    left: 1.5rem;
+}
+.plan p {
+    top: 10.5rem;
+    left: 1.5rem;
+}
+.plan img {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+.Plan-selection h4 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lucida Console", monospace;
+    color: var(--btn-hover);
+    padding: 5px;
+    margin-top: 2px;
+    font-size: 1rem;
+}
+
+.toggle-plan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background: var(--bg-hover);
+    border-radius: 30px;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Styling the add-on options */
+.addOns-Cont {
+    margin-top: 0.5rem;
+}
+.addOnOptions{
+    padding: 1.5rem;
+    display: flex;
+    border: 1px solid var(--btn-hover);
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+.addOnOptions label input { 
+    margin-right: 0.75rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+/* Styling Finishing up */
+.finishingUp-box{
+    background-color: #f8f9fe;
+    border-radius: 4px;
+    height: 19rem;
+    padding: 1.5rem;
+}
+.finishingUp{
+    display: flex;
+    justify-content: space-between;
+}
+.header {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+.arcade strong {
+    margin-bottom: 0.5rem;
+}
+.arcade a {
+    text-decoration: none;
+}
+.arcade a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--btn-hover);
+    font-size: 1.8rem;
+}
+.item, .total{
+    margin: 1.5rem 0;
+    font-size: 1.5rem          ;
+}
+.total .totalPrice{
+    color: var(--btn-hover);
+}
+
+.hide{
+    display: none;
+}
+/* thankyou page styling */
+.thankyou-Cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.thankYou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 1.5rem 0;
+    padding: 2rem;
+}
